@@ -13,34 +13,34 @@
 @import "components/roboto";
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import "components/global";
-@import "components/badges";
+//@import "components/badges";
 @import "components/icons-material-design";
 @import "components/grid";
-@import "components/navbar";
+//@import "components/navbar";
 @import "components/typography";
-@import "components/transitions";
+//@import "components/transitions";
 @import "components/cards";
-@import "components/toast";
-@import "components/tabs";
-@import "components/tooltip";
+//@import "components/toast";
+//@import "components/tabs";
+//@import "components/tooltip";
 @import "components/buttons";
-@import "components/dropdown";
+//@import "components/dropdown";
 @import "components/waves";
 @import "components/modal";
-@import "components/collapsible";
-@import "components/chips";
-@import "components/materialbox";
+//@import "components/collapsible";
+//@import "components/chips";
+//@import "components/materialbox";
 @import "components/forms/forms";
-@import "components/table_of_contents";
-@import "components/sideNav";
-@import "components/preloader";
-@import "components/slider";
-@import "components/carousel";
-@import "components/tapTarget";
-@import "components/pulse";
-@import "components/date_picker/default";
-@import "components/date_picker/default.date";
-@import "components/date_picker/default.time";
+//@import "components/table_of_contents";
+//@import "components/sideNav";
+//@import "components/preloader";
+//@import "components/slider";
+//@import "components/carousel";
+//@import "components/tapTarget";
+//@import "components/pulse";
+//@import "components/date_picker/default";
+//@import "components/date_picker/default.date";
+//@import "components/date_picker/default.time";
 
 
 
@@ -59,12 +59,19 @@ h1 {
 .checkbox-item {
   padding: 0 0 0 20px !important;
  }
-.title-checkbox {
-  margin: 22px 0 0 11px !important;
+
+.title-check {
+  font-size: 2.5em;
+  margin: 0 0 0 10px !important;
 }
 .trash-checklist {
   margin: 10px 0 0 0;
 }
+
+.trash-checklist:hover {
+  color: $secondary-color;
+}
+
 .delete-item {
   opacity:0;
 }
@@ -81,9 +88,33 @@ h1 {
   color: $secondary-color !important;
   font-weight: bold;
 }
-.checklist {
-  margin-bottom: 25px;
-}
+
 .checklist-body li {
   margin-bottom: 0;
+}
+
+//Checklist padding
+.checklist {
+  //padding-right: 5px;
+  margin-bottom: 25px;
+}
+
+//Effects
+/* Strikethrough */
+
+.strikethrough {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.strikethrough:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 1px rgba(255,255,255,0.6);
+  margin-top: -1.7em;
+  background: black;
 }
