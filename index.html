@@ -4,7 +4,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/materialize.css"  media="screen,projection"/>
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,48 +15,30 @@
     <h1 class="center blue-text">Easy Scrum</h1>
     <br/>
     <div class="row">
-        <div class="col s12 m6 l4 z-depth-2 checklist">
+        <div class="col s12 m5 offset-m1 z-depth-2 checklist" id="checklist1">
             <div class="checklist-header white-text blue row">
                 <div class="col s2">
-                    <p class="title-checkbox">
-                        <input type="checkbox" class="filled-in" id="filled-in-box-title" />
-                        <label for="filled-in-box-title"></label>
-                    </p>
+                    <p><i class="material-icons title-check">check</i></p>
                 </div>
                 <div class="col s8 input-field checklist-title">
-                    <input value="Checklist" id="checklist-title" type="text" class="checklist-title-input">
-                    <label for="checklist-title"></label>
+                    <input value="Checklist" id="checklist-title1" type="text" class="checklist-title-input">
+                    <label for="checklist-title1"></label>
                 </div>
                 <div class="col s2">
                     <p><i class="material-icons trash-checklist">delete</i></p>
                 </div>
             </div>
             <ul class="checklist-body row">
-                <li class="row">
+                <li class="row" id="item1.1">
                     <div class="col s2">
                         <p class="checkbox-item">
-                            <input type="checkbox" class="filled-in" id="filled-in-box-task1" checked="checked" />
-                            <label for="filled-in-box-task1"></label>
+                            <input type="checkbox" class="filled-in filled-in-item" id="filled-in-box-task1.1" />
+                            <label for="filled-in-box-task1.1"></label>
                         </p>
                     </div>
                     <div class="col s8 input-field">
-                        <input placeholder="Title" id="task1" type="text" class="large">
-                        <label for="task1"></label>
-                    </div>
-                    <div class="col s2">
-                        <p><i class="material-icons delete-item">delete</i></p>
-                    </div>
-                </li>
-                <li class="row">
-                    <div class="col s2">
-                        <p class="checkbox-item">
-                            <input type="checkbox" class="filled-in" id="filled-in-box-task2"/>
-                            <label for="filled-in-box-task2"></label>
-                        </p>
-                    </div>
-                    <div class="col s8 input-field">
-                        <input placeholder="Title" id="task2" type="text" class="large">
-                        <label for="task2"></label>
+                        <input placeholder="Task" id="task1.1" type="text" class="large">
+                        <label for="task1.1"></label>
                     </div>
                     <div class="col s2">
                         <p><i class="material-icons delete-item">delete</i></p>
@@ -67,13 +49,14 @@
                 </li>
             </ul>
         </div>
-        <div class="col s12 m6 l4 center">
-            <a class="waves-effect waves-light btn new-chk-bt">+ &nbsp; NEW CHECKLIST</a>
+        <div class="col s12 m5 offset-m1 center">
+            <a class="waves-effect waves-light btn" id="new-chk-bt">+ &nbsp; NEW CHECKLIST</a>
         </div>
     </div>
 </div>
 
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bin/our_script.js"></script>
 </body>
 </html>
