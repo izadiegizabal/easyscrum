@@ -4729,18 +4729,18 @@ h1 {
   font-family: "Roboto Slab";
   font-weight: 700; }
 
+.checklist {
+  margin-bottom: 25px; }
+
 .checklist-title {
   margin-top: 10px; }
-
-.checklist-done-counter {
-  padding-bottom: 15px; }
-
-.checkbox-item {
-  padding: 0 0 0 20px !important; }
 
 .title-check {
   font-size: 2.5em;
   margin: 0 0 0 10px !important; }
+
+.checklist-title-input {
+  font-size: 1.25rem !important; }
 
 .trash-checklist {
   margin: 10px 0 0 0; }
@@ -4748,14 +4748,23 @@ h1 {
 .trash-checklist:hover {
   color: #5c6bc0; }
 
+.checkbox-item {
+  padding: 0 0 0 20px !important; }
+
 .delete-item {
   opacity: 0; }
 
 .delete-item:hover {
   opacity: 0.5; }
 
-.checklist-title-input {
-  font-size: 1.25rem !important; }
+li.row:hover .delete-item {
+  opacity: 0.5; }
+
+.delete-item:hover, .trash-checklist:hover, .add-item:hover {
+  cursor: pointer; }
+
+.checklist-body li {
+  margin-bottom: 0; }
 
 .add-item {
   margin-left: 30px; }
@@ -4764,11 +4773,8 @@ h1 {
   color: #5c6bc0 !important;
   font-weight: bold; }
 
-.checklist-body li {
-  margin-bottom: 0; }
-
-.checklist {
-  margin-bottom: 25px; }
+input[type=text]:not(.browser-default):disabled {
+  border-bottom: 0; }
 
 /* Strikethrough */
 .strikethrough {
