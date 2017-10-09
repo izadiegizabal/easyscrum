@@ -208,3 +208,7 @@ form p:last-child {
     border-color: $input-disabled-solid-color;
   }
 }
+
+textarea {
+  border: 1px solid transparent;
+}
