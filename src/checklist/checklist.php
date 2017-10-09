@@ -3,9 +3,9 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../../sass/materialize.css"  media="screen,projection"/>
-
     <script type="text/javascript" src="../../js/bin/js.cookie.js"></script>
 
 
@@ -38,7 +38,7 @@
             while($row = mysqli_fetch_array($results)){
                 $checklist = '<div class="col s12 m5 offset-m1 z-depth-2 checklist" id="check' . $row['id'] . '">
                             <div class="checklist-header white-text blue row">
-                                <div class="col s2">
+                                <div class="col s2 checkbox-wrap">
                                      <input type="checkbox" class="filled-in filled-in-item" id="checklist' . $row['id'] . '">
                                      <label class="filled-in-box-task" for="checklist' . $row['id'] . '"></label>
                                 </div>
@@ -73,7 +73,7 @@
 </div>
 
 <!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 <script type="text/javascript" src="../../js/bin/our_script.js"></script>
 <script type="text/javascript" src="../../js/bin/checklistHandler.js"></script>
 </body>

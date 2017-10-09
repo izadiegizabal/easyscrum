@@ -1,9 +1,22 @@
 $(document).ready(function() {
-
     getData();
     addItem();
     addChecklist();
     updateTitle();
+    $(document.body).on('click', '.delete-item', function () {
+        var $id = $(this).attr('id');
+        $.ajax({
+            method: 'POST',
+            url: 'deleteItem.php?' + 'id=' + $id,
+            data: 'id=' + $id,
+            success: function () {
+                console.log('success');
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
 });
 
 
@@ -70,7 +83,7 @@ function getDataSupport($id) {
 }
 
 function updateTitle($a, $val, $id) {
-    console.log($id);
+/*    console.log($id);*/
     $.ajax({
         method: 'POST',
         url: 'updateItem.php?' + 'description=' + $val + '&id=' + $id,
@@ -81,4 +94,39 @@ function updateTitle($a, $val, $id) {
         error: function () {
         }
     })
+}
+function strikethroughChange(input, checkbox) {
+    if (checkbox) {
+        input.css('text-decoration', 'line-through');
+        input.prop("disabled", true);
+    }
+    else {
+        input.css('text-decoration', 'none');
+        input.prop("disabled", false);
+    }
+}
+function updateActive($object) {
+    console.log($object.checked);
+    console.log($object.name);
+        //alert($(this).attr('id'));
+        var id = $(this).parent().attr('id');
+        var active = this.checked;
+        /*console.log('success');*/
+        $.ajax({
+            method: 'POST',
+            url: 'updateActiveItem.php?' + 'id=' + $object.name + '&active=' + $object.checked,
+            data: 'id=' + $object.name + '&active=' + $object.checked,
+            success: function () {
+                var test = $('.check_item' + $object.name);
+                if ($object.checked === true)
+                    strikethroughChange(test, $object.checked);
+                else
+                    strikethroughChange(test, $object.checked);
+
+             /*   console.log('success');*/
+            },
+            error: function () {
+                console.log('err')
+            }
+        })
 }

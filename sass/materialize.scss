@@ -74,6 +74,7 @@ h1 {
 
 .delete-item {
   opacity:0;
+  cursor: pointer;
 }
 .delete-item:hover {
   opacity: 0.5;
@@ -117,4 +118,11 @@ h1 {
   box-shadow: 0 1px rgba(255,255,255,0.6);
   margin-top: -1.7em;
   background: black;
+}
+
+.checkbox-wrap {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
