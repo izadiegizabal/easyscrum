@@ -40,8 +40,9 @@ $( document ).ready(function() {
     $(document.body).on('click', '.filled-in-item', function () {
         var div = this.parentNode.parentNode.nextElementSibling;
         div.classList.toggle("strikethrough");
-        //Not allowed to change strikethrough task
-        $('.strikethrough input[type="text"]').prop('disabled',true);
+
+		//Not allowed to change strikethrough task
+		$('.strikethrough input[type="text"]').prop('disabled',true);
     });
 */
 
