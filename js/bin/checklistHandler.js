@@ -83,7 +83,7 @@ function getDataSupport($id) {
 }
 
 function updateTitle($a, $val, $id) {
-/*    console.log($id);*/
+    /*    console.log($id);*/
     $.ajax({
         method: 'POST',
         url: 'updateItem.php?' + 'description=' + $val + '&id=' + $id,
@@ -105,28 +105,57 @@ function strikethroughChange(input, checkbox) {
         input.prop("disabled", false);
     }
 }
+
 function updateActive($object) {
     console.log($object.checked);
     console.log($object.name);
-        //alert($(this).attr('id'));
-        var id = $(this).parent().attr('id');
-        var active = this.checked;
-        /*console.log('success');*/
-        $.ajax({
-            method: 'POST',
-            url: 'updateActiveItem.php?' + 'id=' + $object.name + '&active=' + $object.checked,
-            data: 'id=' + $object.name + '&active=' + $object.checked,
-            success: function () {
-                var test = $('.check_item' + $object.name);
-                if ($object.checked === true)
-                    strikethroughChange(test, $object.checked);
-                else
-                    strikethroughChange(test, $object.checked);
+    //alert($(this).attr('id'));
+    var id = $(this).parent().attr('id');
+    var active = this.checked;
+    /*console.log('success');*/
+    $.ajax({
+        method: 'POST',
+        url: 'updateActiveItem.php?' + 'id=' + $object.name + '&active=' + $object.checked,
+        data: 'id=' + $object.name + '&active=' + $object.checked,
+        success: function () {
+            var test = $('.check_item' + $object.name);
+            if ($object.checked === true)
+                strikethroughChange(test, $object.checked);
+            else
+                strikethroughChange(test, $object.checked);
 
-             /*   console.log('success');*/
-            },
-            error: function () {
-                console.log('err')
-            }
-        })
+            /*   console.log('success');*/
+        },
+        error: function () {
+            console.log('err')
+        }
+    })
+}
+
+function updateChecklist($a, $val, $id) {
+    console.log($id);
+    $.ajax({
+        method: 'POST',
+        url: 'updateChecklist.php?' + 'title=' + $val + '&id=' + $id,
+        data: 'title=' + $val + '&id=' + $id,
+        success: function () {
+            window.location.reload();
+        },
+        error: function () {
+        }
+    })
+}
+
+function deleteChecklist($id) {
+    console.log($id);
+    $.ajax({
+        method: 'POST',
+        url: 'deleteChecklist.php?' + '&id=' + $id,
+        data: '&id=' + $id,
+        success: function () {
+            window.location.reload();
+        },
+        error: function () {
+        }
+    })
 }
