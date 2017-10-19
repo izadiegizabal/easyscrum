@@ -4861,20 +4861,33 @@ h1 {
 
 .modal {
   background-color: #E91E63; }
-  .modal .task-header p {
-    margin: 0; }
-  .modal .task-header .input-field {
-    padding: 20px 18px 15px;
-    margin: 0; }
-    .modal .task-header .input-field label {
-      margin: 25px 18px;
-      color: rgba(255, 255, 255, 0.75) !important; }
-  .modal .task-header input {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important; }
-    .modal .task-header input:focus {
-      border-bottom: 2px solid white !important; }
-    .modal .task-header input::placeholder {
+  .modal .task-header {
+    display: flex;
+    align-items: center; }
+    .modal .task-header i {
+      width: 10%;
+      position: relative;
+      top: 50%;
+      left: 50%;
       color: rgba(255, 255, 255, 0.4); }
+      .modal .task-header i:hover {
+        color: white;
+        cursor: pointer; }
+    .modal .task-header p {
+      margin: 0; }
+    .modal .task-header .input-field {
+      width: 90%;
+      padding: 20px 18px 15px;
+      margin: 0; }
+      .modal .task-header .input-field label {
+        margin: 25px 18px;
+        color: rgba(255, 255, 255, 0.75) !important; }
+    .modal .task-header input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important; }
+      .modal .task-header input:focus {
+        border-bottom: 2px solid white !important; }
+      .modal .task-header input::placeholder {
+        color: rgba(255, 255, 255, 0.4); }
   .modal .task-content {
     background-color: white;
     padding: 15px 18px 1px; }
