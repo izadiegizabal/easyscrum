@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-// Colors
+// Mixins
+@import "components/mixins";
 @import "components/color";
 
 // Variables;
@@ -24,7 +25,7 @@
 //@import "components/tabs";
 //@import "components/tooltip";
 @import "components/buttons";
-//@import "components/dropdown";
+@import "components/dropdown";
 @import "components/waves";
 @import "components/modal";
 //@import "components/collapsible";
@@ -32,7 +33,7 @@
 //@import "components/materialbox";
 @import "components/forms/forms";
 //@import "components/table_of_contents";
-//@import "components/sideNav";
+//@import "components/sidenav";
 //@import "components/preloader";
 //@import "components/slider";
 //@import "components/carousel";
@@ -52,6 +53,76 @@ h1 {
   font-weight: 700;
 }
 
+// SCRUM BOARD //////////////////////
+
+// TASK MODAL //////////////////////
+.modal {
+  background-color: #E91E63;
+
+  .task-header {
+    p {
+      margin: 0;
+    }
+    .input-field {
+      padding: 20px 18px 15px;
+      margin: 0;
+      label {
+        margin: 25px 18px;
+        color: rgba(255,255,255,0.75) !important;
+      }
+    }
+    input {
+      border-bottom: 1px solid rgba(255,255,255, 0.4) !important;
+      &:focus {
+        border-bottom: 2px solid white !important;
+      }
+      &::placeholder {
+        color: rgba(255,255,255,0.4);
+      }
+    }
+  }
+
+  .task-content {
+    background-color: white;
+    padding: 15px 18px 1px;
+
+    h5 {
+      margin-bottom: 40px;
+    }
+
+    .input-field {
+      margin-bottom: 30px;
+    }
+
+    input, textarea {
+      border-bottom: 1px solid rgba(0,0,0, 0.1) !important;
+    }
+
+    input:focus, textarea:focus {
+      border-bottom: 1.5px solid $secondary-color !important;
+    }
+  }
+
+  .task-footer {
+    padding-top: 15px;
+
+    label {
+      color: rgba(255,255,255,0.75) !important;
+    }
+    input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+    }
+    i {
+      color: white;
+    }
+    .dropdown-trigger {
+      color: white;
+    }
+    .modal-footer {
+      background-color: transparent !important;
+    }
+  }
+}
 
 
 // CHECKLIST //////////////////////
@@ -59,62 +130,79 @@ h1 {
 //General
 .checklist {
   margin-bottom: 25px;
-}
 
+  //Checklist Title
+  .checklist-title {
+    margin-top: 10px;
 
-//Checklist Title
-.checklist-title {
-  margin-top: 10px;
-}
-.title-check {
-  font-size: 2.5em;
-  margin: 0 0 0 10px !important;
-}
-.checklist-title-input {
-  font-size: 1.25rem !important;
-}
-.trash-checklist {
-  margin: 10px 0 0 0;
-}
-.trash-checklist:hover {
-  color: $secondary-color;
-}
+    input {
+      border-bottom: 1px solid rgba(255,255,255, 0.4) !important;
+      &:focus {
+        border-bottom: 2px solid white !important;
+      }
+      &::placeholder {
+        color: rgba(255,255,255,0.4);
+      }
+    }
+  }
+  .title-check {
+    font-size: 2.5em;
+    padding: 2px 5px;
+  }
+  .checklist-title-input {
+    font-size: 1.25rem !important;
+    color: white;
+  }
+  .trash-checklist {
+    margin: 10px 0 0 0;
 
+    &:hover {
+      color: $secondary-color;
+    }
+  }
 
-//Checklist Items
-.checkbox-item {
-  padding: 0 0 0 20px !important;
-}
-.delete-item {
-  opacity:0;
-  cursor: pointer;
-}
-.delete-item:hover {
-  opacity: 0.5;
-}
-li.row:hover .delete-item {
-  opacity: 0.5;
-}
-.delete-item:hover, .trash-checklist:hover, .add-item:hover {
-  cursor: pointer;
-}
-.checklist-body li {
-  margin-bottom: 0;
-}
+  //Checklist Items
+  .checkbox-item {
+    padding: 0 0 0 20px !important;
+  }
+  .delete-item {
+    opacity:0;
+    cursor: pointer;
 
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  li.row:hover .delete-item {
+    opacity: 0.5;
+  }
+  .delete-item:hover, .trash-checklist:hover, .add-item:hover {
+    cursor: pointer;
+  }
+  .checklist-body li {
+    margin-bottom: 0;
+  }
 
-//Add item / checklist
-.add-item {
-  margin-left: 30px;
-}
-.add-item:hover {
-  color: $secondary-color !important;
-  font-weight: bold;
-}
+  //Add item / checklist
+  .add-item {
+    margin-left: 30px;
 
-// Others
-input[type=text]:not(.browser-default):disabled {
-  border-bottom:0
+    &:hover {
+      color: $secondary-color !important;
+      font-weight: bold;
+    }
+  }
+
+  // Others
+  input[type=text]:not(.browser-default):disabled {
+    border-bottom:0;
+  }
+  .checkbox-wrap {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 }
 
 
@@ -125,21 +213,28 @@ input[type=text]:not(.browser-default):disabled {
   display: inline-block;
   position: relative;
   transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
-}
-.strikethrough:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  box-shadow: 0 1px rgba(255,255,255,0.6);
-  margin-top: -1.7em;
-  background: black;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    box-shadow: 0 1px rgba(255,255,255,0.6);
+    margin-top: -1.7em;
+    background: black;
+  }
 }
 
-.checkbox-wrap {
-  height: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
+/* Scrollbar personalisation */
+::-webkit-scrollbar {
+  width: 12px;
 }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-moz-selection { background: $primary-color; color: #fff; }
+::selection { background: $primary-color; color: #fff; }
