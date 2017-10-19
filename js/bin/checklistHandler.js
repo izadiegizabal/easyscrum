@@ -17,6 +17,20 @@ $(document).ready(function() {
             }
         })
     });
+    $(document.body).on('click', '.trash-checklist', function () {
+        var $id = $(this).attr('id');
+         $.ajax({
+            method: 'POST',
+            url: 'deleteChecklist.php?' + 'id=' + $id,
+            data: 'id=' + $id,
+            success: function () {
+                console.log('success');
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
 });
 
 
@@ -38,6 +52,7 @@ function addItem() {
             url: 'addItem.php?' + 'description=' + des + '&ref=' + $checklistId,
             data: 'description=' + des,
             success: function () {
+                console.log('aaa');
                 window.location.reload();
             },
             error: function () {
@@ -66,7 +81,7 @@ function addChecklist() {
 
 function getData(){
     var cookie = Cookies.get('numList')
-    for (var i = 1;i <= cookie; i++) {
+    for (var i = 1;i <= cookie + 1; i++) {
         var $id = i;
         getDataSupport($id);
     }
@@ -77,7 +92,7 @@ function getDataSupport($id) {
         url: 'getItem.php?id=' + $id,
         success: function (html) {
             var show = document.getElementById('check' + $id);
-            $(show).find('ul').append(html);
+            $(show).find('ul').prepend(html);
         }
     });
 }
@@ -138,20 +153,6 @@ function updateChecklist($a, $val, $id) {
         method: 'POST',
         url: 'updateChecklist.php?' + 'title=' + $val + '&id=' + $id,
         data: 'title=' + $val + '&id=' + $id,
-        success: function () {
-            window.location.reload();
-        },
-        error: function () {
-        }
-    })
-}
-
-function deleteChecklist($id) {
-    console.log($id);
-    $.ajax({
-        method: 'POST',
-        url: 'deleteChecklist.php?' + '&id=' + $id,
-        data: '&id=' + $id,
         success: function () {
             window.location.reload();
         },

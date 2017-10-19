@@ -40,15 +40,13 @@
                 $checklist = '<div class="col s12 m5 offset-m1 z-depth-2 checklist" id="check' . $row['id'] . '">
                             <div class="checklist-header white-text blue row">
                                 <div class="col s2">
-                                     <input type="checkbox" class="filled-in filled-in-item" id="checklist' . $row['id'] . '">
-                                     <label class="filled-in-box-task check-box" for="checklist' . $row['id'] . '"></label>
                                 </div>
                                 <div class="col s8 input-field checklist-title">
                                         <textarea onchange="updateChecklist(this, this.value, this.id)" onkeyup="textAreaAdjust(this)" placeholder="checklist name" id="' . $row['id'] . '" type="text" class="large">'.$row['title'].'</textarea>
                                         <label for=""></label>
                                 </div>
                                 <div class="col s2">
-                                    <p onclick="deleteChecklist(this.id)"><i class="material-icons trash-checklist">delete</i></p>
+                                    <p><i id="' . $row['id'] . '" class="material-icons trash-checklist">delete</i></p>
                                 </div>
                             </div>
                             <ul class="checklist-body row">
