@@ -55,6 +55,25 @@ h1 {
 
 // SCRUM BOARD //////////////////////
 
+.progress-col {
+  & .col.l2 {
+    width: 20%;
+    padding: 0.5rem
+  }
+  & .backlog-body {
+    padding: 1rem;
+    & a {
+      width: 100%;
+    }
+  }
+  & .backlog-header {
+    padding: 0.5rem 0rem;
+    & h5 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
 // TASK MODAL //////////////////////
 .modal {
   background-color: #E91E63;
