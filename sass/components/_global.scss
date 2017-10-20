@@ -239,7 +239,7 @@ video.responsive-video {
     z-index: -1;
 
     img {
-      display: none;
+      opacity: 0;
       position: absolute;
       left: 50%;
       bottom: 0;
@@ -361,6 +361,8 @@ table, th, td {
 table {
   width:100%;
   display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
 
   &.bordered > thead > tr,
   &.bordered > tbody > tr {
@@ -481,6 +483,9 @@ td, th{
 
 // Collections
 .collection {
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border: 1px solid $collection-border-color;
+  border-radius: 2px;
   overflow: hidden;
   position: relative;
 
@@ -489,6 +494,7 @@ td, th{
     line-height: $collection-line-height;
     padding: 10px 20px;
     margin: 0;
+    border-bottom: 1px solid $collection-border-color;
 
     // Avatar Collection
     &.avatar {
