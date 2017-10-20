@@ -4858,6 +4858,23 @@ input[type=range]:focus:not(.active)::-ms-thumb {
 h1 {
   font-family: "Roboto Slab";
   font-weight: 700; }
+ 
+.progress-col .col.l2 {
+  width: 20%;
+  padding: 0.5rem
+}
+.progress-col .backlog-body {
+  padding: 1rem;
+}
+.progress-col .backlog-body a {
+  width: 100%;
+}
+.progress-col .backlog-header {
+  padding: 0.5rem 0rem
+}
+.progress-col .backlog-header h5 {
+  font-size: 1.2rem;
+}
 
 .modal {
   background-color: #E91E63; }
