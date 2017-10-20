@@ -3,12 +3,9 @@
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../../sass/materialize.css"  media="screen,projection"/>
     <script type="text/javascript" src="../../js/bin/js.cookie.js"></script>
-
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
@@ -17,6 +14,9 @@
             resize: none;
             padding: 13px 0;
             overflow: hidden;
+        }
+        .check-box {
+            margin: 24px;
         }
     </style>
 </head>
@@ -28,26 +28,22 @@
     <div class="row">
         <?php
             include '../config.php';
-
             //$db = new Db();
             $query = "SELECT * FROM checklist";
             $results = mysqli_query($con,$query);
             $rowcount =mysqli_num_rows($results);
-
             setcookie("numList", $rowcount, time() + 3600);
             while($row = mysqli_fetch_array($results)){
                 $checklist = '<div class="col s12 m5 offset-m1 z-depth-2 checklist" id="check' . $row['id'] . '">
                             <div class="checklist-header white-text blue row">
-                                <div class="col s2 checkbox-wrap">
-                                     <input type="checkbox" class="filled-in filled-in-item" id="checklist' . $row['id'] . '">
-                                     <label class="filled-in-box-task" for="checklist' . $row['id'] . '"></label>
+                                <div class="col s2">
                                 </div>
                                 <div class="col s8 input-field checklist-title">
-                                        <textarea onkeyup="textAreaAdjust(this)" placeholder="checklist name" id="' . $row['id'] . '" type="text" class="large">Checklist</textarea>
+                                        <textarea onchange="updateChecklist(this, this.value, this.id)" onkeyup="textAreaAdjust(this)" placeholder="checklist name" id="' . $row['id'] . '" type="text" class="large">'.$row['title'].'</textarea>
                                         <label for=""></label>
                                 </div>
                                 <div class="col s2">
-                                    <p><i class="material-icons trash-checklist">delete</i></p>
+                                    <p><i id="' . $row['id'] . '" class="material-icons trash-checklist">delete</i></p>
                                 </div>
                             </div>
                             <ul class="checklist-body row">
@@ -73,9 +69,8 @@
 </div>
 
 <!--Import jQuery before materialize.js-->
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="../../js/bin/our_script.js"></script>
 <script type="text/javascript" src="../../js/bin/checklistHandler.js"></script>
 </body>
 </html>
-
