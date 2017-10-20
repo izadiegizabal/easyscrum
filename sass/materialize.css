@@ -1601,138 +1601,161 @@
 .transparent-text {
   color: transparent !important; }
 
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
  */
 html {
-  font-family: sans-serif;
+  line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
+/* Sections
+   ========================================================================== */
 /**
- * Remove default margin.
+ * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0; }
 
-/* HTML5 display definitions
-   ========================================================================== */
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Add the correct display in IE 9-.
  */
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
-main,
-menu,
 nav,
-section,
-summary {
+section {
   display: block; }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none; }
-
-/* Links
-   ========================================================================== */
-/**
- * Remove the gray background color from active links in IE 10.
- */
-a {
-  background-color: transparent; }
-
-/**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
- */
-a:active,
-a:hover {
-  outline: 0; }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold; }
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic; }
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
+/* Grouping content
+   ========================================================================== */
 /**
- * Address styling not present in IE 8/9.
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
  */
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000; }
 
 /**
- * Address inconsistent and variable font size in all browsers.
+ * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%; }
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
  */
 sub,
 sup {
@@ -1741,220 +1764,233 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-sup {
-  top: -0.5em; }
-
 sub {
   bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
 
 /* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9/10.
+ * Add the correct display in IE 9-.
  */
-img {
-  border: 0; }
+audio,
+video {
+  display: inline-block; }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
  */
 svg:not(:root) {
   overflow: hidden; }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px; }
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  box-sizing: content-box;
-  height: 0; }
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto; }
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
 /* Forms
    ========================================================================== */
 /**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: inherit;
+  font-family: sans-serif;
   /* 1 */
-  font: inherit;
-  /* 2 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
   margin: 0;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
  */
-button {
+button,
+input {
+  /* 1 */
   overflow: visible; }
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
 select {
+  /* 1 */
   text-transform: none; }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html [type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
+  /* 2 */ }
 
 /**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
- * Remove inner padding and border in Firefox 4+.
+ * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0; }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Restore the focus styles unset by the previous rule.
  */
-input {
-  line-height: normal; }
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
 
 /**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
+ * Correct the padding in Firefox.
  */
-input[type="checkbox"],
-input[type="radio"] {
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
 
 /**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
+ * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
  */
-input[type="search"] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  box-sizing: content-box;
+  outline-offset: -2px;
   /* 2 */ }
 
 /**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
- * Define consistent border, margin, and padding.
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
  */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
   /* 1 */
-  padding: 0;
+  font: inherit;
   /* 2 */ }
 
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
  */
-textarea {
-  overflow: auto; }
+details,
+menu {
+  display: block; }
 
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+/*
+ * Add the correct display in all browsers.
  */
-optgroup {
-  font-weight: bold; }
+summary {
+  display: list-item; }
 
-/* Tables
+/* Scripting
    ========================================================================== */
 /**
- * Remove most spacing between table cells.
+ * Add the correct display in IE 9-.
  */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+canvas {
+  display: inline-block; }
 
-td,
-th {
-  padding: 0; }
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
 
 @font-face {
   font-family: "Roboto";
@@ -2003,7 +2039,7 @@ a {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, .card-panel, .card, .btn, .btn-large, .btn-floating {
+.z-depth-1, .card-panel, .card, .btn, .btn-large, .btn-floating, .dropdown-content {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
@@ -2130,7 +2166,7 @@ video.responsive-video {
     bottom: 0;
     z-index: -1; }
     .parallax-container .parallax img {
-      display: none;
+      opacity: 0;
       position: absolute;
       left: 50%;
       bottom: 0;
@@ -2220,7 +2256,9 @@ table, th, td {
 
 table {
   width: 100%;
-  display: table; }
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0; }
   table.bordered > thead > tr, table.bordered > tbody > tr {
     border-bottom: 1px solid #d0d0d0; }
   table.striped > tbody > tr:nth-child(odd) {
@@ -2301,13 +2339,17 @@ td, th {
     table.responsive-table.bordered tbody tr {
       border-right: 1px solid #d0d0d0; } }
 .collection {
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
   overflow: hidden;
   position: relative; }
   .collection .collection-item {
     background-color: #fff;
     line-height: 1.5rem;
     padding: 10px 20px;
-    margin: 0; }
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0; }
     .collection .collection-item.avatar {
       min-height: 84px;
       padding-left: 72px;
@@ -2338,14 +2380,14 @@ td, th {
     .collection .collection-item:last-child {
       border-bottom: none; }
     .collection .collection-item.active {
-      background-color: #5c6bc0;
-      color: white; }
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(140, 140, 140, 0.5); }
       .collection .collection-item.active .secondary-content {
         color: #fff; }
   .collection a.collection-item {
     display: block;
     transition: .25s;
-    color: #5c6bc0; }
+    color: rgba(0, 0, 0, 0.5); }
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
@@ -2359,7 +2401,7 @@ td, th {
 
 .secondary-content {
   float: right;
-  color: #5c6bc0; }
+  color: rgba(0, 0, 0, 0.5); }
 
 .collapsible .collection {
   margin: 0;
@@ -2382,7 +2424,7 @@ td, th {
   height: 4px;
   display: block;
   width: 100%;
-  background-color: #eff1f9;
+  background-color: rgba(102, 102, 102, 0.5);
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden; }
@@ -2391,10 +2433,10 @@ td, th {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #5c6bc0;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: width .3s linear; }
   .progress .indeterminate {
-    background-color: #5c6bc0; }
+    background-color: rgba(0, 0, 0, 0.5); }
     .progress .indeterminate:before {
       content: '';
       position: absolute;
@@ -2493,7 +2535,7 @@ input[type=range] + .thumb {
 @media only screen and (min-width: 993px) {
   .container {
     width: 70%; } }
-.container .row {
+.col .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
 
@@ -3380,18 +3422,18 @@ small {
 
 .btn:focus, .btn-large:focus,
 .btn-floating:focus {
-  background-color: #4150a8; }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #5c6bc0;
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
   letter-spacing: .5px;
   transition: .2s ease-out;
   cursor: pointer; }
   .btn:hover, .btn-large:hover {
-    background-color: #6e7cc7; }
+    background-color: rgba(13, 13, 13, 0.5); }
 
 .btn-floating {
   display: inline-block;
@@ -3403,13 +3445,13 @@ small {
   height: 40px;
   line-height: 40px;
   padding: 0;
-  background-color: #5c6bc0;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   transition: .3s;
   cursor: pointer;
   vertical-align: middle; }
   .btn-floating:hover {
-    background-color: #5c6bc0; }
+    background-color: rgba(0, 0, 0, 0.5); }
   .btn-floating:before {
     border-radius: 0; }
   .btn-floating.btn-large {
@@ -3508,7 +3550,7 @@ button.btn-floating {
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: #5c6bc0;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     transform: scale(0); }
 
@@ -3535,6 +3577,56 @@ button.btn-floating {
 
 .btn-block {
   display: block; }
+
+.dropdown-content {
+  background-color: #fff;
+  margin: 0;
+  display: none;
+  min-width: 100px;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+  transform-origin: 0 0; }
+  .dropdown-content li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none; }
+    .dropdown-content li:hover, .dropdown-content li.active {
+      background-color: #eee; }
+    .dropdown-content li:focus {
+      outline: none;
+      background-color: #dadada; }
+    .dropdown-content li.divider {
+      min-height: 0;
+      height: 1px; }
+    .dropdown-content li > a, .dropdown-content li > span {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.5);
+      display: block;
+      line-height: 22px;
+      padding: 14px 16px; }
+    .dropdown-content li > span > label {
+      top: 1px;
+      left: 0;
+      height: 18px; }
+    .dropdown-content li > a > i {
+      height: inherit;
+      line-height: inherit;
+      float: left;
+      margin: 0 24px 0 0;
+      width: 24px; }
+
+.input-field.col .dropdown-content [type="checkbox"] + label {
+  top: 1px;
+  left: 0;
+  height: 18px;
+  transform: none; }
 
 /*!
  * Waves v0.6.0
@@ -3691,21 +3783,21 @@ button.btn-floating {
   will-change: bottom, opacity; }
 
 select:focus {
-  outline: 1px solid white; }
+  outline: 1px solid rgba(120, 120, 120, 0.5); }
 
 button:focus {
   outline: none;
-  background-color: #6b78c6; }
+  background-color: rgba(10, 10, 10, 0.5); }
 
 label {
   font-size: 0.8rem;
-  color: #5c6bc0; }
+  color: rgba(0, 0, 0, 0.5); }
 
 /* Text Inputs + Textarea
    ========================================================================== */
 /* Style Placeholders */
 ::placeholder {
-  color: #a6aedc; }
+  color: rgba(51, 51, 51, 0.5); }
 
 /* Text inputs */
 input:not([type]),
@@ -3723,12 +3815,14 @@ input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0;
   outline: none;
   height: 3rem;
   width: 100%;
   font-size: 1rem;
+  margin: 0 0 8px 0;
+  padding: 0;
   box-shadow: none;
   box-sizing: content-box;
   transition: all 0.3s; }
@@ -3798,8 +3892,8 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]),
   textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #5c6bc0;
-    box-shadow: 0 1px 0 0 #5c6bc0; }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.5); }
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=password]:not(.browser-default):focus:not([readonly]) + label,
@@ -3813,7 +3907,35 @@ textarea.materialize-textarea {
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label,
   textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #5c6bc0; }
+    color: rgba(0, 0, 0, 0.5); }
+  input:not([type]):focus.valid ~ label,
+  input[type=text]:not(.browser-default):focus.valid ~ label,
+  input[type=password]:not(.browser-default):focus.valid ~ label,
+  input[type=email]:not(.browser-default):focus.valid ~ label,
+  input[type=url]:not(.browser-default):focus.valid ~ label,
+  input[type=time]:not(.browser-default):focus.valid ~ label,
+  input[type=date]:not(.browser-default):focus.valid ~ label,
+  input[type=datetime]:not(.browser-default):focus.valid ~ label,
+  input[type=datetime-local]:not(.browser-default):focus.valid ~ label,
+  input[type=tel]:not(.browser-default):focus.valid ~ label,
+  input[type=number]:not(.browser-default):focus.valid ~ label,
+  input[type=search]:not(.browser-default):focus.valid ~ label,
+  textarea.materialize-textarea:focus.valid ~ label {
+    color: #4CAF50; }
+  input:not([type]):focus.invalid ~ label,
+  input[type=text]:not(.browser-default):focus.invalid ~ label,
+  input[type=password]:not(.browser-default):focus.invalid ~ label,
+  input[type=email]:not(.browser-default):focus.invalid ~ label,
+  input[type=url]:not(.browser-default):focus.invalid ~ label,
+  input[type=time]:not(.browser-default):focus.invalid ~ label,
+  input[type=date]:not(.browser-default):focus.invalid ~ label,
+  input[type=datetime]:not(.browser-default):focus.invalid ~ label,
+  input[type=datetime-local]:not(.browser-default):focus.invalid ~ label,
+  input[type=tel]:not(.browser-default):focus.invalid ~ label,
+  input[type=number]:not(.browser-default):focus.invalid ~ label,
+  input[type=search]:not(.browser-default):focus.invalid ~ label,
+  textarea.materialize-textarea:focus.invalid ~ label {
+    color: #F44336; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=password]:not(.browser-default).validate + label,
@@ -3828,58 +3950,6 @@ textarea.materialize-textarea {
   input[type=search]:not(.browser-default).validate + label,
   textarea.materialize-textarea.validate + label {
     width: 100%; }
-  input:not([type]).invalid + label:after, input:not([type]).valid + label:after,
-  input[type=text]:not(.browser-default).invalid + label:after,
-  input[type=text]:not(.browser-default).valid + label:after,
-  input[type=password]:not(.browser-default).invalid + label:after,
-  input[type=password]:not(.browser-default).valid + label:after,
-  input[type=email]:not(.browser-default).invalid + label:after,
-  input[type=email]:not(.browser-default).valid + label:after,
-  input[type=url]:not(.browser-default).invalid + label:after,
-  input[type=url]:not(.browser-default).valid + label:after,
-  input[type=time]:not(.browser-default).invalid + label:after,
-  input[type=time]:not(.browser-default).valid + label:after,
-  input[type=date]:not(.browser-default).invalid + label:after,
-  input[type=date]:not(.browser-default).valid + label:after,
-  input[type=datetime]:not(.browser-default).invalid + label:after,
-  input[type=datetime]:not(.browser-default).valid + label:after,
-  input[type=datetime-local]:not(.browser-default).invalid + label:after,
-  input[type=datetime-local]:not(.browser-default).valid + label:after,
-  input[type=tel]:not(.browser-default).invalid + label:after,
-  input[type=tel]:not(.browser-default).valid + label:after,
-  input[type=number]:not(.browser-default).invalid + label:after,
-  input[type=number]:not(.browser-default).valid + label:after,
-  input[type=search]:not(.browser-default).invalid + label:after,
-  input[type=search]:not(.browser-default).valid + label:after,
-  textarea.materialize-textarea.invalid + label:after,
-  textarea.materialize-textarea.valid + label:after {
-    display: none; }
-  input:not([type]).invalid + label.active:after, input:not([type]).valid + label.active:after,
-  input[type=text]:not(.browser-default).invalid + label.active:after,
-  input[type=text]:not(.browser-default).valid + label.active:after,
-  input[type=password]:not(.browser-default).invalid + label.active:after,
-  input[type=password]:not(.browser-default).valid + label.active:after,
-  input[type=email]:not(.browser-default).invalid + label.active:after,
-  input[type=email]:not(.browser-default).valid + label.active:after,
-  input[type=url]:not(.browser-default).invalid + label.active:after,
-  input[type=url]:not(.browser-default).valid + label.active:after,
-  input[type=time]:not(.browser-default).invalid + label.active:after,
-  input[type=time]:not(.browser-default).valid + label.active:after,
-  input[type=date]:not(.browser-default).invalid + label.active:after,
-  input[type=date]:not(.browser-default).valid + label.active:after,
-  input[type=datetime]:not(.browser-default).invalid + label.active:after,
-  input[type=datetime]:not(.browser-default).valid + label.active:after,
-  input[type=datetime-local]:not(.browser-default).invalid + label.active:after,
-  input[type=datetime-local]:not(.browser-default).valid + label.active:after,
-  input[type=tel]:not(.browser-default).invalid + label.active:after,
-  input[type=tel]:not(.browser-default).valid + label.active:after,
-  input[type=number]:not(.browser-default).invalid + label.active:after,
-  input[type=number]:not(.browser-default).valid + label.active:after,
-  input[type=search]:not(.browser-default).invalid + label.active:after,
-  input[type=search]:not(.browser-default).valid + label.active:after,
-  textarea.materialize-textarea.invalid + label.active:after,
-  textarea.materialize-textarea.valid + label.active:after {
-    display: block; }
 
 /* Validation Sass Placeholders */
 input.valid:not([type]), input.valid:not([type]):focus,
@@ -3938,65 +4008,114 @@ textarea.materialize-textarea.invalid:focus, .select-wrapper.invalid > input.sel
   border-bottom: 1px solid #F44336;
   box-shadow: 0 1px 0 0 #F44336; }
 
-input:not([type]).valid + label:after, input:not([type]):focus.valid + label:after,
-input[type=text]:not(.browser-default).valid + label:after,
-input[type=text]:not(.browser-default):focus.valid + label:after,
-input[type=password]:not(.browser-default).valid + label:after,
-input[type=password]:not(.browser-default):focus.valid + label:after,
-input[type=email]:not(.browser-default).valid + label:after,
-input[type=email]:not(.browser-default):focus.valid + label:after,
-input[type=url]:not(.browser-default).valid + label:after,
-input[type=url]:not(.browser-default):focus.valid + label:after,
-input[type=time]:not(.browser-default).valid + label:after,
-input[type=time]:not(.browser-default):focus.valid + label:after,
-input[type=date]:not(.browser-default).valid + label:after,
-input[type=date]:not(.browser-default):focus.valid + label:after,
-input[type=datetime]:not(.browser-default).valid + label:after,
-input[type=datetime]:not(.browser-default):focus.valid + label:after,
-input[type=datetime-local]:not(.browser-default).valid + label:after,
-input[type=datetime-local]:not(.browser-default):focus.valid + label:after,
-input[type=tel]:not(.browser-default).valid + label:after,
-input[type=tel]:not(.browser-default):focus.valid + label:after,
-input[type=number]:not(.browser-default).valid + label:after,
-input[type=number]:not(.browser-default):focus.valid + label:after,
-input[type=search]:not(.browser-default).valid + label:after,
-input[type=search]:not(.browser-default):focus.valid + label:after,
-textarea.materialize-textarea.valid + label:after,
-textarea.materialize-textarea:focus.valid + label:after, .select-wrapper.valid + label:after {
-  content: attr(data-success);
-  color: #4CAF50;
-  opacity: 1;
-  transform: translateY(9px); }
+input:not([type]).valid ~ .helper-text[data-success], input:not([type]):focus.valid ~ .helper-text[data-success], input:not([type]).invalid ~ .helper-text[data-error], input:not([type]):focus.invalid ~ .helper-text[data-error],
+input[type=text]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=text]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=text]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=text]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=password]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=password]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=password]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=password]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=email]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=email]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=email]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=email]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=url]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=url]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=url]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=url]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=time]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=time]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=time]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=time]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=date]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=date]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=date]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=date]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=datetime]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=datetime]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=datetime]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=datetime]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=datetime-local]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=datetime-local]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=datetime-local]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=datetime-local]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=tel]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=tel]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=tel]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=tel]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=number]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=number]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=number]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=number]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+input[type=search]:not(.browser-default).valid ~ .helper-text[data-success],
+input[type=search]:not(.browser-default):focus.valid ~ .helper-text[data-success],
+input[type=search]:not(.browser-default).invalid ~ .helper-text[data-error],
+input[type=search]:not(.browser-default):focus.invalid ~ .helper-text[data-error],
+textarea.materialize-textarea.valid ~ .helper-text[data-success],
+textarea.materialize-textarea:focus.valid ~ .helper-text[data-success],
+textarea.materialize-textarea.invalid ~ .helper-text[data-error],
+textarea.materialize-textarea:focus.invalid ~ .helper-text[data-error], .select-wrapper.valid .helper-text[data-success], .select-wrapper.invalid ~ .helper-text[data-error] {
+  color: transparent;
+  user-select: none;
+  pointer-events: none; }
 
-input:not([type]).invalid + label:after, input:not([type]):focus.invalid + label:after,
-input[type=text]:not(.browser-default).invalid + label:after,
-input[type=text]:not(.browser-default):focus.invalid + label:after,
-input[type=password]:not(.browser-default).invalid + label:after,
-input[type=password]:not(.browser-default):focus.invalid + label:after,
-input[type=email]:not(.browser-default).invalid + label:after,
-input[type=email]:not(.browser-default):focus.invalid + label:after,
-input[type=url]:not(.browser-default).invalid + label:after,
-input[type=url]:not(.browser-default):focus.invalid + label:after,
-input[type=time]:not(.browser-default).invalid + label:after,
-input[type=time]:not(.browser-default):focus.invalid + label:after,
-input[type=date]:not(.browser-default).invalid + label:after,
-input[type=date]:not(.browser-default):focus.invalid + label:after,
-input[type=datetime]:not(.browser-default).invalid + label:after,
-input[type=datetime]:not(.browser-default):focus.invalid + label:after,
-input[type=datetime-local]:not(.browser-default).invalid + label:after,
-input[type=datetime-local]:not(.browser-default):focus.invalid + label:after,
-input[type=tel]:not(.browser-default).invalid + label:after,
-input[type=tel]:not(.browser-default):focus.invalid + label:after,
-input[type=number]:not(.browser-default).invalid + label:after,
-input[type=number]:not(.browser-default):focus.invalid + label:after,
-input[type=search]:not(.browser-default).invalid + label:after,
-input[type=search]:not(.browser-default):focus.invalid + label:after,
-textarea.materialize-textarea.invalid + label:after,
-textarea.materialize-textarea:focus.invalid + label:after, .select-wrapper.invalid + label:after {
+input:not([type]).valid ~ .helper-text:after, input:not([type]):focus.valid ~ .helper-text:after,
+input[type=text]:not(.browser-default).valid ~ .helper-text:after,
+input[type=text]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=password]:not(.browser-default).valid ~ .helper-text:after,
+input[type=password]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=email]:not(.browser-default).valid ~ .helper-text:after,
+input[type=email]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=url]:not(.browser-default).valid ~ .helper-text:after,
+input[type=url]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=time]:not(.browser-default).valid ~ .helper-text:after,
+input[type=time]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=date]:not(.browser-default).valid ~ .helper-text:after,
+input[type=date]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=datetime]:not(.browser-default).valid ~ .helper-text:after,
+input[type=datetime]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=datetime-local]:not(.browser-default).valid ~ .helper-text:after,
+input[type=datetime-local]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=tel]:not(.browser-default).valid ~ .helper-text:after,
+input[type=tel]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=number]:not(.browser-default).valid ~ .helper-text:after,
+input[type=number]:not(.browser-default):focus.valid ~ .helper-text:after,
+input[type=search]:not(.browser-default).valid ~ .helper-text:after,
+input[type=search]:not(.browser-default):focus.valid ~ .helper-text:after,
+textarea.materialize-textarea.valid ~ .helper-text:after,
+textarea.materialize-textarea:focus.valid ~ .helper-text:after, .select-wrapper.valid ~ .helper-text:after {
+  content: attr(data-success);
+  color: #4CAF50; }
+
+input:not([type]).invalid ~ .helper-text:after, input:not([type]):focus.invalid ~ .helper-text:after,
+input[type=text]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=text]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=password]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=password]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=email]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=email]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=url]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=url]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=time]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=time]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=date]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=date]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=datetime]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=datetime]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=datetime-local]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=datetime-local]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=tel]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=tel]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=number]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=number]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type=search]:not(.browser-default).invalid ~ .helper-text:after,
+input[type=search]:not(.browser-default):focus.invalid ~ .helper-text:after,
+textarea.materialize-textarea.invalid ~ .helper-text:after,
+textarea.materialize-textarea:focus.invalid ~ .helper-text:after, .select-wrapper.invalid ~ .helper-text:after {
   content: attr(data-error);
-  color: #F44336;
-  opacity: 1;
-  transform: translateY(9px); }
+  color: #F44336; }
 
 input:not([type]) + label:after,
 input[type=text]:not(.browser-default) + label:after,
@@ -4020,7 +4139,9 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   transition: .2s opacity ease-out, .2s color ease-out; }
 
 .input-field {
-  position: relative; }
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
   .input-field.inline {
     display: inline-block;
     vertical-align: middle;
@@ -4033,29 +4154,38 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   .input-field.col .prefix ~ label,
   .input-field.col .prefix ~ .validate ~ label {
     width: calc(100% - 3rem - 1.5rem); }
-  .input-field label {
-    color: #5c6bc0;
+  .input-field > label {
+    color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     font-size: 1rem;
     cursor: text;
-    transition: transform .2s ease-out;
+    transition: transform .2s ease-out, color .2s ease-out;
     transform-origin: 0% 100%;
     text-align: initial;
-    transform: translateY(12px);
-    pointer-events: none; }
-    .input-field label:not(.label-icon).active {
+    transform: translateY(12px); }
+    .input-field > label:not(.label-icon).active {
       transform: translateY(-14px) scale(0.8);
       transform-origin: 0 0; }
+  .input-field .helper-text {
+    position: relative;
+    min-height: 18px;
+    display: block;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54); }
+    .input-field .helper-text::after {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0; }
   .input-field .prefix {
     position: absolute;
     width: 3rem;
     font-size: 2rem;
     transition: color .2s; }
     .input-field .prefix.active {
-      color: #5c6bc0; }
+      color: rgba(0, 0, 0, 0.5); }
   .input-field .prefix ~ input,
   .input-field .prefix ~ textarea,
   .input-field .prefix ~ label,
@@ -4115,12 +4245,6 @@ textarea {
     /* prevents text jump on Enter keypress */
     resize: none;
     min-height: 3rem; }
-    textarea.materialize-textarea.validate + label {
-      height: 100%; }
-      textarea.materialize-textarea.validate + label::after {
-        top: calc(100% - 12px); }
-      textarea.materialize-textarea.validate + label:not(.label-icon).active {
-        transform: translateY(-25px); }
 
 .hiddendiv {
   display: none;
@@ -4135,8 +4259,8 @@ textarea {
 
 /* Autocomplete */
 .autocomplete-content {
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -8px;
+  margin-bottom: 8px;
   display: block;
   opacity: 1;
   position: static; }
@@ -4155,8 +4279,8 @@ textarea {
   opacity: 0;
   pointer-events: none; }
 
-[type="radio"]:not(:checked) + label,
-[type="radio"]:checked + label {
+[type="radio"]:not(:checked) + span,
+[type="radio"]:checked + span {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
@@ -4167,8 +4291,8 @@ textarea {
   transition: .28s ease;
   user-select: none; }
 
-[type="radio"] + label:before,
-[type="radio"] + label:after {
+[type="radio"] + span:before,
+[type="radio"] + span:after {
   content: '';
   position: absolute;
   left: 0;
@@ -4180,66 +4304,66 @@ textarea {
   transition: .28s ease; }
 
 /* Unchecked styles */
-[type="radio"]:not(:checked) + label:before,
-[type="radio"]:not(:checked) + label:after,
-[type="radio"]:checked + label:before,
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:before,
-[type="radio"].with-gap:checked + label:after {
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after,
+[type="radio"]:checked + span:before,
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
   border-radius: 50%; }
 
-[type="radio"]:not(:checked) + label:before,
-[type="radio"]:not(:checked) + label:after {
+[type="radio"]:not(:checked) + span:before,
+[type="radio"]:not(:checked) + span:after {
   border: 2px solid #5a5a5a; }
 
-[type="radio"]:not(:checked) + label:after {
+[type="radio"]:not(:checked) + span:after {
   transform: scale(0); }
 
 /* Checked styles */
-[type="radio"]:checked + label:before {
+[type="radio"]:checked + span:before {
   border: 2px solid transparent; }
 
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:before,
-[type="radio"].with-gap:checked + label:after {
-  border: 2px solid #5c6bc0; }
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid rgba(0, 0, 0, 0.5); }
 
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:after {
-  background-color: #5c6bc0; }
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: rgba(0, 0, 0, 0.5); }
 
-[type="radio"]:checked + label:after {
+[type="radio"]:checked + span:after {
   transform: scale(1.02); }
 
 /* Radio With gap */
-[type="radio"].with-gap:checked + label:after {
+[type="radio"].with-gap:checked + span:after {
   transform: scale(0.5); }
 
 /* Focused styles */
-[type="radio"].tabbed:focus + label:before {
+[type="radio"].tabbed:focus + span:before {
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1); }
 
 /* Disabled Radio With gap */
-[type="radio"].with-gap:disabled:checked + label:before {
+[type="radio"].with-gap:disabled:checked + span:before {
   border: 2px solid rgba(0, 0, 0, 0.42); }
 
-[type="radio"].with-gap:disabled:checked + label:after {
+[type="radio"].with-gap:disabled:checked + span:after {
   border: none;
   background-color: rgba(0, 0, 0, 0.42); }
 
 /* Disabled style */
-[type="radio"]:disabled:not(:checked) + label:before,
-[type="radio"]:disabled:checked + label:before {
+[type="radio"]:disabled:not(:checked) + span:before,
+[type="radio"]:disabled:checked + span:before {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.42); }
 
-[type="radio"]:disabled + label {
+[type="radio"]:disabled + span {
   color: rgba(0, 0, 0, 0.42); }
 
-[type="radio"]:disabled:not(:checked) + label:before {
+[type="radio"]:disabled:not(:checked) + span:before {
   border-color: rgba(0, 0, 0, 0.42); }
 
-[type="radio"]:disabled:checked + label:after {
+[type="radio"]:disabled:checked + span:after {
   background-color: rgba(0, 0, 0, 0.42);
   border-color: #949494; }
 
@@ -4262,7 +4386,7 @@ form p:last-child {
 
 [type="checkbox"] {
   /* checkbox aspect */ }
-  [type="checkbox"] + label {
+  [type="checkbox"] + span:not(.lever) {
     position: relative;
     padding-left: 35px;
     cursor: pointer;
@@ -4271,7 +4395,7 @@ form p:last-child {
     line-height: 25px;
     font-size: 1rem;
     user-select: none; }
-  [type="checkbox"] + label:before, [type="checkbox"]:not(.filled-in) + label:after {
+  [type="checkbox"] + span:not(.lever):before, [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
     content: '';
     position: absolute;
     top: 0;
@@ -4281,65 +4405,65 @@ form p:last-child {
     z-index: 0;
     border: 2px solid #5a5a5a;
     border-radius: 1px;
-    margin-top: 2px;
+    margin-top: 3px;
     transition: .2s; }
-  [type="checkbox"]:not(.filled-in) + label:after {
+  [type="checkbox"]:not(.filled-in) + span:not(.lever):after {
     border: 0;
     transform: scale(0); }
-  [type="checkbox"]:not(:checked):disabled + label:before {
+  [type="checkbox"]:not(:checked):disabled + span:not(.lever):before {
     border: none;
     background-color: rgba(0, 0, 0, 0.42); }
-  [type="checkbox"].tabbed:focus + label:after {
+  [type="checkbox"].tabbed:focus + span:not(.lever):after {
     transform: scale(1);
     border: 0;
     border-radius: 50%;
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1); }
 
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:checked + span:not(.lever):before {
   top: -4px;
   left: -5px;
   width: 12px;
   height: 22px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
-  border-right: 2px solid #5c6bc0;
-  border-bottom: 2px solid #5c6bc0;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   transform: rotate(40deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
-[type="checkbox"]:checked:disabled + label:before {
+[type="checkbox"]:checked:disabled + span:before {
   border-right: 2px solid rgba(0, 0, 0, 0.42);
   border-bottom: 2px solid rgba(0, 0, 0, 0.42); }
 
 /* Indeterminate checkbox */
-[type="checkbox"]:indeterminate + label:before {
+[type="checkbox"]:indeterminate + span:not(.lever):before {
   top: -11px;
   left: -12px;
   width: 10px;
   height: 22px;
   border-top: none;
   border-left: none;
-  border-right: 2px solid #5c6bc0;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
   border-bottom: none;
   transform: rotate(90deg);
   backface-visibility: hidden;
   transform-origin: 100% 100%; }
-[type="checkbox"]:indeterminate:disabled + label:before {
+[type="checkbox"]:indeterminate:disabled + span:not(.lever):before {
   border-right: 2px solid rgba(0, 0, 0, 0.42);
   background-color: transparent; }
 
-[type="checkbox"].filled-in + label:after {
+[type="checkbox"].filled-in + span:not(.lever):after {
   border-radius: 2px; }
-[type="checkbox"].filled-in + label:before,
-[type="checkbox"].filled-in + label:after {
+[type="checkbox"].filled-in + span:not(.lever):before,
+[type="checkbox"].filled-in + span:not(.lever):after {
   content: '';
   left: 0;
   position: absolute;
   /* .1s delay is for check animation */
   transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
   z-index: 1; }
-[type="checkbox"].filled-in:not(:checked) + label:before {
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):before {
   width: 0;
   height: 0;
   border: 3px solid transparent;
@@ -4347,14 +4471,14 @@ form p:last-child {
   top: 10px;
   transform: rotateZ(37deg);
   transform-origin: 100% 100%; }
-[type="checkbox"].filled-in:not(:checked) + label:after {
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
   height: 20px;
   width: 20px;
   background-color: transparent;
   border: 2px solid #5a5a5a;
   top: 0px;
   z-index: 0; }
-[type="checkbox"].filled-in:checked + label:before {
+[type="checkbox"].filled-in:checked + span:not(.lever):before {
   top: 0;
   left: 1px;
   width: 8px;
@@ -4365,30 +4489,30 @@ form p:last-child {
   border-bottom: 2px solid #fff;
   transform: rotateZ(37deg);
   transform-origin: 100% 100%; }
-[type="checkbox"].filled-in:checked + label:after {
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
   top: 0;
   width: 20px;
   height: 20px;
-  border: 2px solid #5c6bc0;
-  background-color: #5c6bc0;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 0; }
-[type="checkbox"].filled-in.tabbed:focus + label:after {
+[type="checkbox"].filled-in.tabbed:focus + span:not(.lever):after {
   border-radius: 2px;
   border-color: #5a5a5a;
   background-color: rgba(0, 0, 0, 0.1); }
-[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+[type="checkbox"].filled-in.tabbed:checked:focus + span:not(.lever):after {
   border-radius: 2px;
-  background-color: #5c6bc0;
-  border-color: #5c6bc0; }
-[type="checkbox"].filled-in:disabled:not(:checked) + label:before {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5); }
+[type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):before {
   background-color: transparent;
   border: 2px solid transparent; }
-[type="checkbox"].filled-in:disabled:not(:checked) + label:after {
+[type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):after {
   border-color: transparent;
   background-color: #949494; }
-[type="checkbox"].filled-in:disabled:checked + label:before {
+[type="checkbox"].filled-in:disabled:checked + span:not(.lever):before {
   background-color: transparent; }
-[type="checkbox"].filled-in:disabled:checked + label:after {
+[type="checkbox"].filled-in:disabled:checked + span:not(.lever):after {
   background-color: #949494;
   border-color: #949494; }
 
@@ -4407,11 +4531,11 @@ form p:last-child {
   width: 0;
   height: 0; }
   .switch label input[type=checkbox]:checked + .lever {
-    background-color: #c4c7d7; }
+    background-color: rgba(64, 64, 64, 0.5); }
     .switch label input[type=checkbox]:checked + .lever:before, .switch label input[type=checkbox]:checked + .lever:after {
       left: 18px; }
     .switch label input[type=checkbox]:checked + .lever:after {
-      background-color: #5c6bc0; }
+      background-color: rgba(0, 0, 0, 0.5); }
 
 .switch label .lever {
   content: "";
@@ -4436,7 +4560,7 @@ form p:last-child {
     top: -3px;
     transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease, transform .1s ease; }
   .switch label .lever:before {
-    background-color: rgba(92, 107, 192, 0.15); }
+    background-color: rgba(0, 0, 0, 0); }
   .switch label .lever:after {
     background-color: #F1F1F1;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
@@ -4444,7 +4568,7 @@ form p:last-child {
 input[type=checkbox]:checked:not(:disabled) ~ .lever:active::before,
 input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::before {
   transform: scale(2.4);
-  background-color: rgba(92, 107, 192, 0.15); }
+  background-color: rgba(0, 0, 0, 0); }
 
 input[type=checkbox]:not(:disabled) ~ .lever:active:before,
 input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
@@ -4475,7 +4599,7 @@ select {
   border-radius: 2px;
   height: 3rem; }
 
-.input-field > select {
+.input-field select {
   display: block;
   position: absolute;
   width: 0;
@@ -4498,26 +4622,29 @@ select {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #5c6bc0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     outline: none;
     height: 3rem;
     line-height: 3rem;
     width: 100%;
     font-size: 1rem;
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
     padding: 0;
     display: block;
     user-select: none; }
-  .select-wrapper span.caret {
+    .select-wrapper input.select-dropdown:focus {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
+  .select-wrapper .caret {
     color: initial;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
-    height: 10px;
+    height: 24px;
     margin: auto 0;
-    font-size: 10px;
-    line-height: 10px; }
+    font-size: 24px;
+    line-height: 24px;
+    z-index: -1; }
   .select-wrapper + label {
     position: absolute;
     top: -26px;
@@ -4543,12 +4670,12 @@ select:disabled {
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent; }
 
-.select-dropdown.dropdown-content li.active {
-  background-color: transparent; }
 .select-dropdown.dropdown-content li:hover {
-  background-color: rgba(0, 0, 0, 0.06); }
+  background-color: rgba(0, 0, 0, 0.08); }
 .select-dropdown.dropdown-content li.selected {
   background-color: rgba(0, 0, 0, 0.03); }
+.select-dropdown.dropdown-content li:focus {
+  background-color: rgba(0, 0, 0, 0.08); }
 
 .prefix ~ .select-wrapper {
   margin-left: 3rem;
@@ -4632,7 +4759,7 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: #5c6bc0;
+  background-color: rgba(0, 0, 0, 0.5);
   margin-left: 7px;
   transform-origin: 50% 50%;
   transform: rotate(-45deg); }
@@ -4640,7 +4767,7 @@ input[type=range] + .thumb {
     display: block;
     width: 30px;
     text-align: center;
-    color: #5c6bc0;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 0;
     transform: rotate(45deg); }
   input[type=range] + .thumb.active {
@@ -4660,18 +4787,19 @@ input[type=range]::-webkit-slider-runnable-track {
   border: none; }
 
 input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
   border: none;
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background-color: #5c6bc0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: box-shadow .3s;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.5);
   transform-origin: 50% 50%;
-  margin: -5px 0 0 0;
-  transition: .3s; }
+  margin: -5px 0 0 0; }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc; }
+input[type=range]:focus:not(.active)::-webkit-slider-thumb {
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.26); }
 
 input[type=range] {
   /* fix for FF unable to apply focus style bug  */
@@ -4680,23 +4808,27 @@ input[type=range] {
 
 input[type=range]::-moz-range-track {
   height: 3px;
-  background: #ddd;
+  background: #c2c0c2;
   border: none; }
+
+input[type=range]::-moz-focus-inner {
+  border: 0; }
 
 input[type=range]::-moz-range-thumb {
   border: none;
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #5c6bc0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: box-shadow .3s;
   margin-top: -5px; }
 
 input[type=range]:-moz-focusring {
   outline: 1px solid #fff;
   outline-offset: -1px; }
 
-input[type=range]:focus::-moz-range-track {
-  background: #ccc; }
+input[type=range]:focus:not(.active)::-moz-range-thumb {
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.26); }
 
 input[type=range]::-ms-track {
   height: 3px;
@@ -4717,79 +4849,156 @@ input[type=range]::-ms-thumb {
   height: 14px;
   width: 14px;
   border-radius: 50%;
-  background: #5c6bc0; }
+  background: rgba(0, 0, 0, 0.5);
+  transition: box-shadow .3s; }
 
-input[type=range]:focus::-ms-fill-lower {
-  background: #888; }
-
-input[type=range]:focus::-ms-fill-upper {
-  background: #ccc; }
+input[type=range]:focus:not(.active)::-ms-thumb {
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.26); }
 
 h1 {
   font-family: "Roboto Slab";
   font-weight: 700; }
 
+.progress-col .col.l2 {
+  width: 20%;
+  padding: 0.5rem; }
+.progress-col .backlog-body {
+  padding: 1rem; }
+  .progress-col .backlog-body a {
+    width: 100%; }
+.progress-col .backlog-header {
+  padding: 0.5rem 0rem; }
+
+.modal {
+  background-color: #E91E63; }
+  .modal .task-header {
+    display: flex;
+    align-items: center; }
+    .modal .task-header i {
+      width: 10%;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      color: rgba(255, 255, 255, 0.4); }
+      .modal .task-header i:hover {
+        color: white;
+        cursor: pointer; }
+    .modal .task-header p {
+      margin: 0; }
+    .modal .task-header .input-field {
+      width: 90%;
+      padding: 20px 18px 15px;
+      margin: 0; }
+      .modal .task-header .input-field label {
+        margin: 25px 18px;
+        color: rgba(255, 255, 255, 0.75) !important; }
+    .modal .task-header input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important; }
+      .modal .task-header input:focus {
+        border-bottom: 2px solid white !important; }
+      .modal .task-header input::placeholder {
+        color: rgba(255, 255, 255, 0.4); }
+  .modal .task-content {
+    background-color: white;
+    padding: 15px 18px 1px; }
+    .modal .task-content h5 {
+      margin-bottom: 40px; }
+    .modal .task-content .input-field {
+      margin-bottom: 30px; }
+    .modal .task-content input, .modal .task-content textarea {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; }
+    .modal .task-content input:focus, .modal .task-content textarea:focus {
+      border-bottom: 1.5px solid rgba(0, 0, 0, 0.5) !important; }
+  .modal .task-footer {
+    padding-top: 15px; }
+    .modal .task-footer label {
+      color: rgba(255, 255, 255, 0.75) !important; }
+    .modal .task-footer input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important; }
+    .modal .task-footer i {
+      color: white; }
+    .modal .task-footer .dropdown-trigger {
+      color: white; }
+    .modal .task-footer .modal-footer {
+      background-color: transparent !important; }
+
 .checklist {
   margin-bottom: 25px; }
-
-.checklist-title {
-  margin-top: 10px; }
-
-.title-check {
-  font-size: 2.5em;
-  margin: 0 0 0 10px !important; }
-
-.checklist-title-input {
-  font-size: 1.25rem !important; }
-
-.trash-checklist {
-  margin: 10px 0 0 0; }
-
-.trash-checklist:hover {
-  color: #5c6bc0; }
-
-.checkbox-item {
-  padding: 0 0 0 20px !important; }
-
-.delete-item {
-  opacity: 0; }
-
-.delete-item:hover {
-  opacity: 0.5; }
-
-li.row:hover .delete-item {
-  opacity: 0.5; }
-
-.delete-item:hover, .trash-checklist:hover, .add-item:hover {
-  cursor: pointer; }
-
-.checklist-body li {
-  margin-bottom: 0; }
-
-.add-item {
-  margin-left: 30px; }
-
-.add-item:hover {
-  color: #5c6bc0 !important;
-  font-weight: bold; }
-
-input[type=text]:not(.browser-default):disabled {
-  border-bottom: 0; }
+  .checklist .checklist-title {
+    margin-top: 10px; }
+    .checklist .checklist-title input {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important; }
+      .checklist .checklist-title input:focus {
+        border-bottom: 2px solid white !important; }
+      .checklist .checklist-title input::placeholder {
+        color: rgba(255, 255, 255, 0.4); }
+  .checklist .title-check {
+    font-size: 2.5em;
+    padding: 2px 5px; }
+  .checklist .checklist-title-input {
+    font-size: 1.25rem !important;
+    color: white; }
+  .checklist .trash-checklist {
+    margin: 10px 0 0 0; }
+    .checklist .trash-checklist:hover {
+      color: rgba(0, 0, 0, 0.5); }
+  .checklist .checkbox-item {
+    padding: 0 0 0 20px !important; }
+  .checklist .delete-item {
+    opacity: 0;
+    cursor: pointer; }
+    .checklist .delete-item:hover {
+      opacity: 0.5; }
+  .checklist li.row:hover .delete-item {
+    opacity: 0.5; }
+  .checklist .delete-item:hover, .checklist .trash-checklist:hover, .checklist .add-item:hover {
+    cursor: pointer; }
+  .checklist .checklist-body li {
+    margin-bottom: 0; }
+  .checklist .add-item {
+    margin-left: 30px; }
+    .checklist .add-item:hover {
+      color: rgba(0, 0, 0, 0.5) !important;
+      font-weight: bold; }
+  .checklist input[type=text]:not(.browser-default):disabled {
+    border-bottom: 0; }
+  .checklist .checkbox-wrap {
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center; }
 
 /* Strikethrough */
 .strikethrough {
   display: inline-block;
   position: relative;
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); }
+  .strikethrough:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.6);
+    margin-top: -1.7em;
+    background: black; }
 
-.strikethrough:after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.6);
-  margin-top: -1.7em;
-  background: black; }
+/* Scrollbar personalisation */
+::-webkit-scrollbar {
+  width: 12px; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+::-moz-selection {
+  background: #42A5F5;
+  color: #fff; }
+
+::selection {
+  background: #42A5F5;
+  color: #fff; }
 
 /*# sourceMappingURL=materialize.css.map */
