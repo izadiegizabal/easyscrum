@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "makecss": "node-sass sass/materialize.scss css/materialize.css | uglifycss css/materialize.css > css/materialize.min.css",
+        "watchcss": "node-sass -w sass/materialize.scss css/materialize.css"
+    }
+}
