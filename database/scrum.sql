@@ -2,9 +2,9 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 07, 2017 at 06:18 PM
--- Server version: 5.6.36-cll-lve
+-- Host: 127.0.0.1:3306
+-- Generation Time: Oct 20, 2017 at 09:13 AM
+-- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,8 +19,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `EasyScrum`
+-- Database: `scrum`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `board`
+--
+
+DROP TABLE IF EXISTS `board`;
+CREATE TABLE IF NOT EXISTS `board` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `card`
+--
+
+DROP TABLE IF EXISTS `card`;
+CREATE TABLE IF NOT EXISTS `card` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `ref_board` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ref_board` (`ref_board`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -28,11 +56,21 @@ SET time_zone = "+00:00";
 -- Table structure for table `checklist`
 --
 
-CREATE TABLE `checklist` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `checklist`;
+CREATE TABLE IF NOT EXISTS `checklist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
-  `active` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `active` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `checklist`
+--
+
+INSERT INTO `checklist` (`id`, `title`, `active`) VALUES
+(5, 'checklist', 0),
+(6, 'checklist', 0);
 
 -- --------------------------------------------------------
 
@@ -40,45 +78,45 @@ CREATE TABLE `checklist` (
 -- Table structure for table `checklist_item`
 --
 
-CREATE TABLE `checklist_item` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `checklist_item`;
+CREATE TABLE IF NOT EXISTS `checklist_item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` text NOT NULL,
   `active` tinyint(1) NOT NULL,
-  `ref_checklist` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ref_checklist` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ref_checklist` (`ref_checklist`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `checklist_item`
 --
 
---
--- Indexes for table `checklist`
---
-ALTER TABLE `checklist`
-  ADD PRIMARY KEY (`id`);
+INSERT INTO `checklist_item` (`id`, `description`, `active`, `ref_checklist`) VALUES
+(12, 'task', 1, 6);
+
+-- --------------------------------------------------------
 
 --
--- Indexes for table `checklist_item`
---
-ALTER TABLE `checklist_item`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `ref_checklist` (`ref_checklist`);
-
---
--- AUTO_INCREMENT for dumped tables
+-- Table structure for table `user_stories`
 --
 
---
--- AUTO_INCREMENT for table `checklist`
---
-ALTER TABLE `checklist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `checklist_item`
---
-ALTER TABLE `checklist_item`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+DROP TABLE IF EXISTS `user_stories`;
+CREATE TABLE IF NOT EXISTS `user_stories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `reason` text NOT NULL,
+  `estimate` int(11) NOT NULL,
+  `business_value` int(11) NOT NULL,
+  `ref_card` int(11) NOT NULL,
+  `ref_user` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ref_card` (`ref_card`),
+  KEY `ref_user` (`ref_user`),
+  KEY `ref_user_2` (`ref_user`),
+  KEY `ref_user_3` (`ref_user`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Constraints for dumped tables
