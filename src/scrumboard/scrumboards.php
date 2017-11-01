@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="input-field col s12 m6">
                     <select class="modal-estimate">
-                        <option value="" disabled>Make a guess</option>
+                        <option selected="" value="" disabled>Make a guess</option>
                         <option value="0">0</option>
                         <option value="0.5">0.5</option>
                         <option value="1">1</option>
@@ -156,7 +156,7 @@
                 </div>
                 <div class="input-field col s12 m6">
                     <select class="modal-value">
-                        <option value="" disabled>Make a guess</option>
+                        <option selected="" value="" disabled>Make a guess</option>
                         <option value="0">0</option>
                         <option value="0.5">0.5</option>
                         <option value="1">1</option>

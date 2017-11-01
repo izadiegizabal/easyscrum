@@ -9,6 +9,22 @@ $( document ).ready(function() {
     $('.open_modal').click(function() {
         var id = $(this).attr('id');
         $('.save_modal').attr("id", id);
+        $(".modal-title").val('');
+        $(".modal-description").val('');
+        $(".modal-reason").val('');
+    });
+
+    $('.modal-detail').click(function() {
+        var id = $(this).attr('id');
+        $.ajax({
+            method: 'GET',
+            url: 'modal_details.php?' + 'id=' + id,
+            success: function (html) {          
+                $(html).appendTo(document.body);
+            },
+            error: function () {
+            }
+        })
     });
 
     $('.save_modal').click(function() {
