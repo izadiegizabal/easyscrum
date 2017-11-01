@@ -24,8 +24,7 @@ $( document ).ready(function() {
             url: 'create.php?' + 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
             data: 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
             success: function () {
-                console.log(this.url);
-                
+                window.location.reload();
             },
             error: function () {
             }
