@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 20, 2017 at 09:13 AM
+-- Generation Time: Nov 01, 2017 at 04:17 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -33,7 +33,14 @@ CREATE TABLE IF NOT EXISTS `board` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `board`
+--
+
+INSERT INTO `board` (`id`, `title`) VALUES
+(1, 'board1\r\n');
 
 -- --------------------------------------------------------
 
@@ -48,7 +55,18 @@ CREATE TABLE IF NOT EXISTS `card` (
   `ref_board` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ref_board` (`ref_board`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `card`
+--
+
+INSERT INTO `card` (`id`, `title`, `ref_board`) VALUES
+(1, 'backlog1', 1),
+(2, 'backlog2', 1),
+(3, 'progress', 1),
+(4, 'sprint', 1),
+(5, 'done', 1);
 
 -- --------------------------------------------------------
 
@@ -62,15 +80,14 @@ CREATE TABLE IF NOT EXISTS `checklist` (
   `title` text NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `checklist`
 --
 
 INSERT INTO `checklist` (`id`, `title`, `active`) VALUES
-(5, 'checklist', 0),
-(6, 'checklist', 0);
+(5, 'checklistsdfasdf', 0);
 
 -- --------------------------------------------------------
 
@@ -86,14 +103,7 @@ CREATE TABLE IF NOT EXISTS `checklist_item` (
   `ref_checklist` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ref_checklist` (`ref_checklist`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `checklist_item`
---
-
-INSERT INTO `checklist_item` (`id`, `description`, `active`, `ref_checklist`) VALUES
-(12, 'task', 1, 6);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -110,13 +120,22 @@ CREATE TABLE IF NOT EXISTS `user_stories` (
   `estimate` int(11) NOT NULL,
   `business_value` int(11) NOT NULL,
   `ref_card` int(11) NOT NULL,
-  `ref_user` int(11) NOT NULL,
+  `ref_user` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `ref_card` (`ref_card`),
   KEY `ref_user` (`ref_user`),
   KEY `ref_user_2` (`ref_user`),
   KEY `ref_user_3` (`ref_user`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_stories`
+--
+
+INSERT INTO `user_stories` (`id`, `title`, `description`, `reason`, `estimate`, `business_value`, `ref_card`, `ref_user`) VALUES
+(1, 'task1', 'asd', 'sdf', 1, 2, 2, NULL),
+(2, 'tas2', 'asd', 'asd', 1, 2, 3, NULL),
+(3, 'dsf', 'sadf', 'sadf', 1, 1, 1, NULL);
 
 --
 -- Constraints for dumped tables
