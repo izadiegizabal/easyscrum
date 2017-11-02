@@ -110,9 +110,10 @@
 
     <!-- Task Modal Structure -->
     <div id="modal1" class="modal">
+        <form class="form-group">
         <div class="task-header">
             <div class="input-field white-text">
-                <input placeholder="PB1: Checklist..." id="task-title" type="text" class="modal-title white-text">
+                <input required="required" placeholder="PB1: Checklist..." id="task-title" type="text" class="modal-title white-text">
                 <label for="task-title">Task Title</label>
             </div>
             <div>
@@ -126,18 +127,18 @@
                 <label for="us-as">As a(n)</label>
             </div> -->
             <div class="input-field">
-                <textarea  placeholder="Be able to create as much checklists I think are necessary for the project / case" id="us-want" class="modal-description materialize-textarea"></textarea>
+                <textarea  placeholder="Be able to create as much checklists I think are necessary for the project / case" id="us-want" class="modal-description materialize-textarea" required="required"></textarea>
                 <label for="us-want">I want to</label>
             </div>
             <div class="input-field">
-                <textarea  placeholder="I can create subtasks that I need to finish first before having finished the bigger ones" id="us-so" class="modal-reason materialize-textarea"></textarea>
+                <textarea  placeholder="I can create subtasks that I need to finish first before having finished the bigger ones" id="us-so" class="modal-reason materialize-textarea" required="required"></textarea>
                 <label for="us-so">So that</label>
             </div>
         </div>
         <div class="task-footer">
             <div class="row">
                 <div class="input-field col s12 m6">
-                    <select class="modal-estimate">
+                    <select class="modal-estimate" required="required">
                         <option selected="" value="" disabled>Make a guess</option>
                         <option value="0">0</option>
                         <option value="0.5">0.5</option>
@@ -155,7 +156,7 @@
                     <label>Estimate</label>
                 </div>
                 <div class="input-field col s12 m6">
-                    <select class="modal-value">
+                    <select class="modal-value" required="required">
                         <option selected="" value="" disabled>Make a guess</option>
                         <option value="0">0</option>
                         <option value="0.5">0.5</option>
@@ -176,6 +177,78 @@
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat white-text">Cancel</a>
                 <a href="#!" class="save_modal modal-action modal-close waves-effect waves-light btn-flat white-text">Save</a>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="task-header">
+            <div class="input-field white-text">
+                <input placeholder="PB1: Checklist..." id="task-title" type="text" class="modal-title1 white-text">
+                <label for="task-title">Task Title</label>
+            </div>
+            <div>
+                <p><i class="delete-us material-icons">delete</i></p>
+            </div>
+        </div>
+        <div class="task-content">
+            <h5>User Story</h5>
+         <!--    <div class="input-field">
+                <input class="user-who" placeholder="User" id="us-as" type="text">
+                <label for="us-as">As a(n)</label>
+            </div> -->
+            <div class="input-field">
+                <textarea  placeholder="Be able to create as much checklists I think are necessary for the project / case" id="us-want" class="modal-description1 materialize-textarea"></textarea>
+                <label for="us-want">I want to</label>
+            </div>
+            <div class="input-field">
+                <textarea  placeholder="I can create subtasks that I need to finish first before having finished the bigger ones" id="us-so" class="modal-reason1 materialize-textarea"></textarea>
+                <label for="us-so">So that</label>
+            </div>
+        </div>
+        <div class="task-footer">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <select class="modal-estimate1">
+                        <option selected="" value="" disabled>Make a guess</option>
+                        <option value="0">0</option>
+                        <option value="0.5">0.5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="8">8</option>
+                        <option value="13">13</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="100">100</option>
+                        <option value="-1">?</option>
+                    </select>
+                    <label>Estimate</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <select class="modal-value1">
+                        <option selected="" value="" disabled>Make a guess</option>
+                        <option value="0">0</option>
+                        <option value="0.5">0.5</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="8">8</option>
+                        <option value="13">13</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                        <option value="100">100</option>
+                        <option value="-1">?</option>
+                    </select>
+                    <label>Business Value</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat white-text">Cancel</a>
+                <a href="#!" class="update_modal modal-action modal-close waves-effect waves-light btn-flat white-text">Update</a>
             </div>
         </div>
     </div>

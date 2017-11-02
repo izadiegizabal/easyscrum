@@ -9,13 +9,33 @@ $( document ).ready(function() {
     $('.open_modal').click(function() {
         var id = $(this).attr('id');
         $('.save_modal').attr("id", id);
+        /*$('.update_modal').attr("id", id);*/
         $(".modal-title").val('');
         $(".modal-description").val('');
         $(".modal-reason").val('');
+        $(".modal-estimate").val('');
+        $(".modal-value").val('');
+    });
+
+     $(document.body).on('click', '.delete-us', function () {
+        var $id = $(this).attr('id');
+        $.ajax({
+            method: 'POST',
+            url: 'delete.php?' + 'id=' + $id,
+            data: 'id=' + $id,
+            success: function () {
+                console.log('success');
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
     });
 
     $('.modal-detail').click(function() {
         var id = $(this).attr('id');
+        $('.update_modal').attr("id", id);
+        $('.delete-us').attr("id", id);
         $.ajax({
             method: 'GET',
             url: 'modal_details.php?' + 'id=' + id,
@@ -38,6 +58,26 @@ $( document ).ready(function() {
          $.ajax({
             method: 'POST',
             url: 'create.php?' + 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
+            data: 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
+            success: function () {
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
+
+    $('.update_modal').click(function() {
+        var id = $(this).attr('id');
+        var title = $('.modal-title1').val();
+        var des = $('.modal-description1').val();
+        var reas = $('.modal-reason1').val();
+        var es = $('.modal-estimate1').val();
+        var val = $('.modal-value1').val();
+
+         $.ajax({
+            method: 'POST',
+            url: 'update.php?' + 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
             data: 'id=' + id + '&title=' + title + '&description=' + des + '&reason=' + reas + '&estimate=' + es + '&val=' + val,
             success: function () {
                 window.location.reload();
