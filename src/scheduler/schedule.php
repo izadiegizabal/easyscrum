@@ -8,11 +8,16 @@
 	
 ?>
 
-<a href="<?php echo(WWW_ROOT . "/src/scheduler/add-event.php") ?>" type="button">+ Add Event</a><br>
 
 
-<table>
-	<?php while($event = mysqli_fetch_assoc($result)) { ?>
-		<tr><a href="<?php echo(WWW_ROOT . "/src/scheduler/add-event.php?Id=") . $event["Id"]  ?>"><?php echo ($event["description"] . "<br>"); ?></a></tr>
-    <?php } ?>
-</table>
+<?php while($row = mysqli_fetch_assoc($result)) {
+	echo '
+		<div id="'. $row['title'] .'" class="col s12" style="background-color: #2A2C35; margin-top: 20px">
+			<h4 class="white-text">'. $row['title'] .'</h4>
+			<p class="white-text">'. $row['date'] .'</p>
+			<p class="white-text">'. $row['description'] .'</p>
+		</div>
+		
+	';	
+} ?>
+

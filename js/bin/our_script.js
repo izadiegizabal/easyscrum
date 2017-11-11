@@ -139,15 +139,36 @@ $( document ).ready(function() {
         });
     });
 
-
-
-
-
     // Init Datepicker
     $('.datepicker').pickadate({
+        format: 'yyyy-mm-dd',
+        formatSubmit: 'yyyy-mm-dd',
         container: 'body',
         selectMonths: true, // Creates a dropdown to control month
         selectYears: 15 // Creates a dropdown of 15 years to control year
     });
+
+
+   
+    $('.create_schedule').click(function (e) {
+        var title = $('.event-title').val();
+        var date = $('.event-date').val();
+        var time = $('.event-time').val();
+        var desc = $('.event-desc').val();
+
+        var datetime = date + " " + time + ":00";
+        console.log(datetime);
+        $.ajax({
+            method: 'POST',
+            url: 'add-event.php?' + 'title=' + title + '&date=' + datetime + '&desc=' + desc,
+            data: 'title=' + title + '&date=' + date + '&desc=' + desc,
+            success: function () {                
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
+
 
 });
