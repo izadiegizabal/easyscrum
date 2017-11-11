@@ -1,5 +1,5 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
@@ -8,8 +8,6 @@
 -- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -137,6 +135,37 @@ INSERT INTO `user_stories` (`id`, `title`, `description`, `reason`, `estimate`, 
 (2, 'tas2', 'asd', 'asd', 1, 2, 3, NULL),
 (3, 'dsf', 'sadf', 'sadf', 1, 1, 1, NULL);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `Id` int(6) NOT NULL,
+  `date` datetime DEFAULT NULL,
+  `description` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `schedule`
+--
+
+INSERT INTO `schedule` (`Id`, `date`, `description`) VALUES
+(21, '2017-11-18 17:12:00', 'Daily Scrum 2 ');
+
+-- --------------------------------------------------------
+
+--
+-- AUTO_INCREMENT for table `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `Id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `user_stories`
+--
+ALTER TABLE `user_stories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --

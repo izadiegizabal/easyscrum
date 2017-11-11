@@ -39,9 +39,9 @@
 //@import "components/carousel";
 //@import "components/tapTarget";
 //@import "components/pulse";
-//@import "components/date_picker/default";
-//@import "components/date_picker/default.date";
-//@import "components/date_picker/default.time";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
 
 
 ///////////////////////////////////
@@ -265,21 +265,15 @@ h1 {
   }
 }
 
-<<<<<<< HEAD
-=======
 /* Scrollbar personalisation */
 ::-webkit-scrollbar {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 ::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 ::-moz-selection { background: $primary-color; color: #fff; }
 ::selection { background: $primary-color; color: #fff; }
-
-@import "components/grid";
