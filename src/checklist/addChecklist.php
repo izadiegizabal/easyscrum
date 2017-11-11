@@ -9,7 +9,9 @@ echo $query['title'];
 
 $query1 = "INSERT INTO checklist (title, active) VALUES ('".$query['title']."', false)";
 echo $query1;
-$insert = mysqli_query($con, $query1);
+$result = mysqli_query($con, $query1);
+
+$row = $result->fetch_assoc();
 
 mysqli_close($con);
 

@@ -16,7 +16,7 @@
 @import "components/global";
 //@import "components/badges";
 @import "components/icons-material-design";
-@import "components/grid";
+
 //@import "components/navbar";
 @import "components/typography";
 //@import "components/transitions";
@@ -59,6 +59,11 @@ h1 {
   & .col.l2 {
     width: 20%;
     padding: 0.5rem
+  }
+  @media #{$large-and-up} {
+    & .col.l2 {
+      width: 20% !important;
+    }
   }
   & .backlog-body {
     padding: 1rem;
