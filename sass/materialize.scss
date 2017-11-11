@@ -39,9 +39,9 @@
 //@import "components/carousel";
 //@import "components/tapTarget";
 //@import "components/pulse";
-//@import "components/date_picker/default";
-//@import "components/date_picker/default.date";
-//@import "components/date_picker/default.time";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
 
 
 ///////////////////////////////////
@@ -260,8 +260,6 @@ h1 {
   }
 }
 
-<<<<<<< HEAD
-=======
 /* Scrollbar personalisation */
 ::-webkit-scrollbar {
   width: 12px;
@@ -274,4 +272,3 @@ h1 {
 }
 ::-moz-selection { background: $primary-color; color: #fff; }
 ::selection { background: $primary-color; color: #fff; }
->>>>>>> 100d1c207fedb0b4fe8a0354bbaa0b8dcc14ce84
