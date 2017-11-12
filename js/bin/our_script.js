@@ -17,6 +17,15 @@ $( document ).ready(function() {
         $(".modal-value").val('');
     });
 
+    $('.open_modal_schedule').click(function() {
+        /*$('.update_modal').attr("id", id);*/
+        $(".event-title").val('');
+        $(".event-desc").val('');
+        $(".event-date").val('');
+    });
+
+
+
      $(document.body).on('click', '.delete-us', function () {
         var $id = $(this).attr('id');
         $.ajax({
@@ -46,6 +55,8 @@ $( document ).ready(function() {
             }
         })
     });
+
+
 
     $('.save_modal').click(function() {
         var id = $(this).attr('id');
@@ -86,6 +97,8 @@ $( document ).ready(function() {
             }
         })
     });
+
+
 
     var draggableOptions = {
         cancel: "a.ui-icon",
@@ -148,6 +161,20 @@ $( document ).ready(function() {
         selectYears: 15 // Creates a dropdown of 15 years to control year
     });
 
+    $('.schedule_detail').click(function() {
+        var id = $(this).attr('id');
+        $('.update_schedule').attr("id", id);
+        $('.delete_schedule').attr("id", id);
+        $.ajax({
+            method: 'GET',
+            url: 'schedule_detail.php?' + 'id=' + id,
+            success: function (html) {          
+                $(html).appendTo(document.body);
+            },
+            error: function () {
+            }
+        })
+    });
 
    
     $('.create_schedule').click(function (e) {
@@ -170,5 +197,40 @@ $( document ).ready(function() {
         })
     });
 
+    $('.update_schedule').click(function() {
+        var id = $(this).attr('id');
+        var title = $('.event-title1').val();
+        var date = $('.event-date1').val();
+        var time = $('.event-time1').val();
+        var desc = $('.event-desc1').val();
+
+        var datetime = date + " " + time + ":00";
+        console.log(datetime);
+        $.ajax({
+            method: 'POST',
+            url: 'update.php?' + 'title=' + title + '&date=' + datetime + '&desc=' + desc + '&id=' + id,
+            data: 'title=' + title + '&date=' + date + '&desc=' + desc + '&id=' + id,
+            success: function () {                
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
+
+    $(document.body).on('click', '.delete_schedule', function () {
+        var $id = $(this).attr('id');
+        $.ajax({
+            method: 'POST',
+            url: 'delete.php?' + 'id=' + $id,
+            data: 'id=' + $id,
+            success: function () {
+                console.log('success');
+                window.location.reload();
+            },
+            error: function () {
+            }
+        })
+    });
 
 });
