@@ -88,7 +88,7 @@ if($_POST['Save'] == "Save"){
 ?>
 
 
-<form action="<?php echo(WWW_ROOT . "/src/scheduler/add-event.php") ?>" method="post">
+<!--form action="<?php echo(WWW_ROOT . "/src/scheduler/add-event.php") ?>" method="post">
 	<dl>
 		<dt>Date</dt>
 		<dd><input type="date" name="Date" value="<?php if(isset($event)) echo($date); ?>"></dd>
@@ -103,4 +103,23 @@ if($_POST['Save'] == "Save"){
 	</dl>
 	<input type="hidden" name="Id" value="<?php if(isset($_GET['Id'])) echo($_GET['Id']); ?>">
 	<input type="submit" name="<?php echo($task); ?>" value="<?php echo($task); ?>">
+</form-->
+
+<form class="col s12" action="<?php echo(WWW_ROOT . "/src/scheduler/add-event.php") ?>" method="post">
+	<div class="row">	
+		<div class="input-field col s12">
+			<input type="date" id="date" class="datepicker" name="Date" value="<?php if(isset($event)) echo($date); ?>">
+			<label for="date">Date</label>
+		</div>
+		<div class="input-field col s12">
+			<input type="time" id="time" name="Time" value="<?php if(isset($event)) echo($time); ?>">
+			<label for="time">Time</label>
+		</div>
+		<div class="input-field col s12">
+			<textarea type="textarea" class="materialize-textarea" id="description" name="Description" value="<?php if(isset($event)) echo($event['description']); ?>"></textarea>
+			<label for="description">Description</label>
+		</div>
+		<input type="hidden" name="Id" value="<?php if(isset($_GET['Id'])) echo($_GET['Id']); ?>">
+		<input type="submit" name="<?php echo($task); ?>" value="<?php echo($task); ?>">
+	</div>
 </form>
