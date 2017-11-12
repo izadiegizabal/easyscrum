@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 01, 2017 at 04:17 PM
+-- Generation Time: Nov 12, 2017 at 11:56 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -78,14 +80,15 @@ CREATE TABLE IF NOT EXISTS `checklist` (
   `title` text NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `checklist`
 --
 
 INSERT INTO `checklist` (`id`, `title`, `active`) VALUES
-(5, 'checklistsdfasdf', 0);
+(5, 'n kj kjjk', 0),
+(6, 'checklist', 0);
 
 -- --------------------------------------------------------
 
@@ -101,7 +104,41 @@ CREATE TABLE IF NOT EXISTS `checklist_item` (
   `ref_checklist` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ref_checklist` (`ref_checklist`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `checklist_item`
+--
+
+INSERT INTO `checklist_item` (`id`, `description`, `active`, `ref_checklist`) VALUES
+(2, 'task', 0, 5),
+(3, 'task', 0, 6),
+(4, 'task', 0, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule`
+--
+
+DROP TABLE IF EXISTS `schedule`;
+CREATE TABLE IF NOT EXISTS `schedule` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text NOT NULL,
+  `date` datetime NOT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `schedule`
+--
+
+INSERT INTO `schedule` (`id`, `title`, `date`, `description`) VALUES
+(7, 'khoa', '2017-11-18 13:00:00', 'asdfasdfasd'),
+(2, 'testsdasdfsdfasdfsadfsadfsd', '2017-11-07 21:05:00', 'testsadfWFWEF'),
+(3, 'test', '2017-11-14 16:02:00', 'test'),
+(4, 'asdgasdgasdg', '2017-11-17 14:01:00', 'hello');
 
 -- --------------------------------------------------------
 
@@ -124,48 +161,8 @@ CREATE TABLE IF NOT EXISTS `user_stories` (
   KEY `ref_user` (`ref_user`),
   KEY `ref_user_2` (`ref_user`),
   KEY `ref_user_3` (`ref_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `user_stories`
---
-
-INSERT INTO `user_stories` (`id`, `title`, `description`, `reason`, `estimate`, `business_value`, `ref_card`, `ref_user`) VALUES
-(1, 'task1', 'asd', 'sdf', 1, 2, 2, NULL),
-(2, 'tas2', 'asd', 'asd', 1, 2, 3, NULL),
-(3, 'dsf', 'sadf', 'sadf', 1, 1, 1, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `schedule`
---
-
-CREATE TABLE `schedule` (
-  `Id` int(6) NOT NULL,
-  `date` datetime DEFAULT NULL,
-  `description` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `schedule`
---
-
-INSERT INTO `schedule` (`Id`, `date`, `description`) VALUES
-(21, '2017-11-18 17:12:00', 'Daily Scrum 2 ');
-
--- --------------------------------------------------------
-
---
--- AUTO_INCREMENT for table `schedule`
---
-ALTER TABLE `schedule`
-  MODIFY `Id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
---
--- AUTO_INCREMENT for table `user_stories`
---
-ALTER TABLE `user_stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Constraints for dumped tables
 --
