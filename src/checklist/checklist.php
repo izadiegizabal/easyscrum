@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <!--Import Google Icon Font-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../../sass/materialize.css"  media="screen,projection"/>
-
     <script type="text/javascript" src="../../js/bin/js.cookie.js"></script>
-
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style>
@@ -72,7 +75,7 @@
 </div>
 
 <!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 <script type="text/javascript" src="../../js/bin/our_script.js"></script>
 <script type="text/javascript" src="../../js/bin/checklistHandler.js"></script>
 </body>
