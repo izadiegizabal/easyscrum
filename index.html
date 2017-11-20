@@ -11,56 +11,43 @@
 </head>
 
 <body>
-<nav>
-    <div class="nav-wrapper">
-        <ul id="nav-mobile" class="center hide-on-med-and-down">
-        <li><a href="index.html">Checklist</a></li>
-        <li><a href="backlog.html">Backlog</a></li>
-        </ul>
-    </div>
-</nav>
 <div class="container">
     <h1 class="center blue-text">Easy Scrum</h1>
-    <br/>
     <div class="row">
-        <div class="col s12 m5 offset-m1 z-depth-2 checklist" id="checklist1">
-            <div class="checklist-header white-text blue row">
-                <div class="col s2">
-                    <p><i class="material-icons title-check">check</i></p>
-                </div>
-                <div class="col s8 input-field checklist-title">
-                    <input value="Checklist" id="checklist-title1" type="text" class="checklist-title-input">
-                    <label for="checklist-title1"></label>
-                </div>
-                <div class="col s2">
-                    <p><i class="material-icons trash-checklist">delete</i></p>
-                </div>
+        <div class="col s12 m4">
+          <div class="card blue">
+            <div class="card-content white-text">
+              <span class="card-title">Checklist</span>
+              <p>Control the progress of the project development. The tool helps to look after ready/in progress tasks.</p>
             </div>
-            <ul class="checklist-body row">
-                <li class="row" id="item1.1">
-                    <div class="col s2">
-                        <p class="checkbox-item">
-                            <input type="checkbox" class="filled-in filled-in-item" id="filled-in-box-task1.1" />
-                            <label for="filled-in-box-task1.1"></label>
-                        </p>
-                    </div>
-                    <div class="col s8 input-field">
-                        <input placeholder="Task" id="task1.1" type="text" class="large">
-                        <label for="task1.1"></label>
-                    </div>
-                    <div class="col s2">
-                        <p><i class="material-icons delete-item">delete</i></p>
-                    </div>
-                </li>
-                <li class="row">
-                    <p class="add-item grey-text">+ Add an Item</p>
-                </li>
-            </ul>
+            <div class="card-action">
+              <a href="/src/checklist/checklist.php">Use Tool</a>
+            </div>
+          </div>
         </div>
-        <div class="col s12 m5 offset-m1 center">
-            <a class="waves-effect waves-light btn" id="new-chk-bt">+ &nbsp; NEW CHECKLIST</a>
-        </div>
-    </div>
+        <div class="col s12 m4">
+            <div class="card purple darken-4">
+              <div class="card-content white-text">
+                <span class="card-title">Scrum Board</span>
+                <p>The tool for deviding the big task into small tasks. It keeps User Stories and business values</p>
+              </div>
+              <div class="card-action">
+                <a href="/src/scrumboard/scrumboards.html">Use Tool</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card pink">
+              <div class="card-content white-text">
+                <span class="card-title">Schedule</span>
+                <p>Keep all meeting under control. Add new events for your scrum Team</p>
+              </div>
+              <div class="card-action">
+                <a href="/src/scheduler/scheduler.php">Use Tool</a>
+              </div>
+            </div>
+          </div>
+      </div>
 </div>
 
 <!--Import jQuery before materialize.js-->
